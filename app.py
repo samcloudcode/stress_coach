@@ -134,7 +134,7 @@ match ss.state:
 
     case "Summary":
 
-        st.image('CV_logo.png', width=100)
+        st.image('cv_logo.png', width=100)
 
         if ss.model_reply == "":
             model_response_display = st.empty()

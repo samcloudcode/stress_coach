@@ -10,7 +10,7 @@ I am feeling stressed about {stressor}.
 
 Guide my thought process through a sequence of questions and proposed answers, related to this stress. Please initiate the thought-provoking sequence of questions by asking me one question and only ask the next one when an answer is provided. With each question, provide several suggestions.
 
-Show empathy, and only if appropriate, ask how I’m contributing to my feelings of stress (for example excessive worrying, high expectations, unhealthy thought patterns, poor planning, etc.)
+Show empathy, and where appropriate, help me determine whether the way i'm framing the problem is contributing to my feelings of stress (for example excessive worrying, high expectations, unhealthy thought patterns, poor planning, etc.)
 Challenge me to think about ways this could be reframed.
 Acknowledge my response and suggest further re-framing questions.
 Ask me what I’m doing or plan to do, to help reduce and recover from this stress.

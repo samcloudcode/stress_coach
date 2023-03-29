@@ -136,10 +136,6 @@ match ss.state:
 
         st.image('CV_logo.png', width=100)
 
-        st.header('Welcome')
-        st.subheader('Subheader')
-        st.markdown('Markdown')
-
         if ss.model_reply == "":
             model_response_display = st.empty()
             update_model_response()
@@ -159,7 +155,6 @@ match ss.state:
             if st.button("Send me a copy", type='primary'):
                 html_blocks = {
                     '{action_plan}': github_markup_to_html(ss.model_reply),
-                    '{name}': ss.user_info["name"]
                 }
                 html_file_path = 'email_template.html'
 

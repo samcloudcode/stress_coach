@@ -87,7 +87,7 @@ def update_model_response():
 
 
 # Initiate states and variables
-st.set_page_config(page_title="Change Voyage ReThink", page_icon=":relieved: ", layout="centered",
+st.set_page_config(page_title="Stress Coach | Change Voyage", page_icon=":relieved:", layout="centered",
                    initial_sidebar_state="collapsed", menu_items=None)
 
 ss = st.session_state
@@ -100,7 +100,7 @@ match ss.state:
     case "Intro":
         st.image('cv_logo.png', width=150)
 
-        st.header('CV Stress Coach')
+        st.header('Stress Coach')
 
         st.markdown('Please share a stress in your professional or personal life that you would like to discuss today.')
 

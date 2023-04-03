@@ -135,6 +135,8 @@ match ss.state:
     case "Summary":
 
         st.image('cv_logo.png', width=100)
+        actions = []
+        response = ['Error: No actions loaded...']
 
         if ss.model_reply == "":
             model_response_display = st.empty()
@@ -146,21 +148,29 @@ match ss.state:
 
             for i, action in enumerate(response[1:]):
                 action_text = action.strip()
-                st.text_area(label=str(i), label_visibility='collapsed', value=action_text)
+                actions.append("")
+                actions[i] = st.text_area(label=str(i), label_visibility='collapsed', value=action_text)
 
         col1, col2 = st.columns(2)
 
         with col1:
             email_address = st.text_input("Email address", label_visibility='collapsed', placeholder="Enter your email")
             if st.button("Send me a copy", type='primary'):
+
+                action_bullets = ""
+                for action in actions:
+                    action_bullets = action_bullets + '* ' + action + '\n\n'
+
                 html_blocks = {
-                    '{action_plan}': github_markup_to_html(ss.model_reply),
+                    '{summary}': github_markup_to_html(response[0]),
+                    '{actions}': github_markup_to_html(action_bullets)
                 }
+
                 html_file_path = 'email_template.html'
 
                 updated_html = add_html_blocks(html_file_path, html_blocks)
 
-                if send_email("ReThink - Discussion Summary and Actions", updated_html, email_address):
+                if send_email("Stress Management - Discussion Summary and Actions", updated_html, email_address):
                     st.text("Email sent!")
                 else:
                     st.text("Problem with email address provided. Email not sent.")

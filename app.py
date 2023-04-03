@@ -81,7 +81,7 @@ def update_model_response():
         except:
             print(f"openai error, attempt {qu_attempts}")
             qu_attempts += 1
-            time.sleep(1)
+            time.sleep(2)
 
     st.experimental_rerun()
 

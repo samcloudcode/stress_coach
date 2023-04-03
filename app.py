@@ -40,11 +40,16 @@ def initiate_states():
 
 def next_question():
     if ss.counts <= 4:
-        local_prompt = ss.user_reply
-        update_messages(local_prompt)
-        ss.counts = ss.counts + 1
-        ss.user_reply = ""
-        st.session_state["reply"] = ""
+        if len(ss.user_reply) > 2:
+            local_prompt = ss.user_reply
+            update_messages(local_prompt)
+            ss.counts = ss.counts + 1
+            ss.user_reply = ""
+            st.session_state["reply"] = ""
+        else:
+            st.error('To facilitate a more meaningful discussion, '
+                     'please include more information in your response.')
+
     else:
         ss.state = 'Summary'
         update_messages(summary_prompt)

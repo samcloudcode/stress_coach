@@ -39,7 +39,7 @@ def initiate_states():
 
 
 def next_question():
-    if ss.counts <= 5:
+    if ss.counts <= 4:
         local_prompt = ss.user_reply
         update_messages(local_prompt)
         ss.counts = ss.counts + 1

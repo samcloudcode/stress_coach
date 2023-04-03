@@ -116,11 +116,15 @@ match ss.state:
                                             'including physical, mental and emotional effects.')
 
         if st.button("Next", type='primary'):
-            ss.state = 'Questions'
-            prompt = prompt_template.format(stressor=stressor)
-            update_messages(prompt)
-            ss.user_reply = ""
-            st.experimental_rerun()
+            if len(stressor) > 2:
+                ss.state = 'Questions'
+                prompt = prompt_template.format(stressor=stressor)
+                update_messages(prompt)
+                ss.user_reply = ""
+                st.experimental_rerun()
+            else:
+                st.error('To facilitate a more meaningful discussion, '
+                         'please include more information in your response.')
 
     case "Questions":
 

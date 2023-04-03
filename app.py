@@ -104,7 +104,7 @@ match ss.state:
 
         st.markdown('Please share a stress in your professional or personal life that you would like to discuss today.')
 
-        max_questions = 5
+        max_questions = 4
 
         stressor = st.text_area('Stressor', label_visibility='collapsed',
                                 placeholder='Please share as much detail as possible, '
@@ -125,7 +125,7 @@ match ss.state:
         else:
             model_response_display = st.markdown(ss.model_reply)
 
-        if ss.counts <= 5:
+        if ss.counts <= 4:
             ss.user_reply = st.text_area("Response:", label_visibility='collapsed',
                                          placeholder="Take your time to think about your reply.",
                                          key='reply')

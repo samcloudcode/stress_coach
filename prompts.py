@@ -21,7 +21,7 @@ Throughout the sequence of questions, focus on facilitating my thought-processin
 
 The questions should be asked one at a time, only move onto the next question after I have replied. 
 
-Ask me exactly 5 questions. 
+Ask me exactly 4 questions. 
 
 Our conversation should progress as follows:
 
@@ -30,9 +30,9 @@ Our conversation should progress as follows:
 [150 word reply to Answer 1, then Question 2, provided by you]
 %Answer 2, written by me%
 ...
-[150 word reply to Answer 4, then Question 5, provided by you]
-%Answer 5, written by me%
-[150 word reply to Answer 5]
+[150 word reply to Answer 3, then Question 4, provided by you]
+%Answer 4, written by me%
+[150 word reply to Answer 4]
 """
 
 summary_prompt = """

@@ -102,7 +102,7 @@ match ss.state:
 
         st.header('Stress Coach')
 
-        st.markdown('Please share a stress in your professional or personal life that you would like to discuss today.')
+        st.markdown('Please share a stress in your professional or personal life that you would like to discuss today. Everything shared is confidential.')
 
         max_questions = 4
 

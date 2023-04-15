@@ -116,6 +116,7 @@ match ss.state:
                                             'including physical, mental and emotional effects.')
 
         if st.button("Next", type='primary'):
+            print(len(stressor))
             if len(stressor) > 2:
                 ss.state = 'Questions'
                 prompt = prompt_template.format(stressor=stressor)

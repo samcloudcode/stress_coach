@@ -1,10 +1,11 @@
 import smtplib
 import streamlit as st
+import os
 from email.message import EmailMessage
 import markdown
 
-USER = st.secrets['GMAIL_SENDER']
-PASS = st.secrets['GMAIL_PASS']
+USER = os.environ['GMAIL_SENDER']
+PASS = os.environ['GMAIL_PASS']
 
 
 def send_email(subject, html_body, sendto):

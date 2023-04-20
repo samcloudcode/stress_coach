@@ -1,6 +1,7 @@
 import streamlit as st
 import openai
 import time
+import os
 from prompts import prompt_template, summary_prompt, system_message
 from emailing import send_email, add_html_blocks, github_markup_to_html
 
@@ -64,7 +65,7 @@ def update_messages(local_prompt):
 
 def update_model_response():
     """Calls the OpenAI API and updates model_response_display"""
-    openai.api_key = st.secrets['SECRET_KEY']
+    openai.api_key = os.environ['SECRET_KEY']
 
     qu_attempts = 1
     while qu_attempts <= 10:
